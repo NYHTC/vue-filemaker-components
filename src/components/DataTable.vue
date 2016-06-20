@@ -1,18 +1,18 @@
 <template>
 	<div>
-		<h4 v-if="rawData.reportTitle">{{ rawData.reportTitle }}</h4>
+		<h4 v-if="title">{{ title }}</h4>
 
 		<table class="table table-striped">
 			<thead>
 				<tr>
-					<th v-for="key in rawData.legend">
+					<th v-for="key in legend">
 						{{ key.label }}
 					</th>
 				</tr>
 			</thead>
 			<tbody>
-				<tr v-for="row in rawData.rows | orderBy rawData.orderBy" style="{{ getAlternateStyles(row) }}">
-					<td v-for="key in rawData.legend" @click="performAction(row, key)" v-bind:class="{ 'action' : hasAction(row, key)}">
+				<tr v-for="row in rows | orderBy sort" style="{{ getAlternateStyles(row) }}">
+					<td v-for="key in legend" @click="performAction(row, key)" v-bind:class="{ 'action' : hasAction(row, key)}">
 						{{ row[key.field] }}
 					</td>
 				</tr>
@@ -23,7 +23,22 @@
 
 <script>
 	export default {
-		props: ['rawData'],
+		props: {
+			rows: {
+				type: Array,
+				required: true
+			},
+			legend: {
+				type: Array,
+				required: true
+			},
+			sort: {
+				type: String
+			},
+			title: {
+				type: String
+			}
+		},
 
 		methods: {
 

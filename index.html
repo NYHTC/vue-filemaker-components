@@ -9,11 +9,17 @@
 
 <div class="container">
 
-	<data-table :raw-data='{"rows":[{"id": 1,"first":"Bob","last":"Smith","__action__":""},{"id": 3,"first":"Fred","last":"Johnson"},{"id": 2,"first":"Sue","last":"Doe"},{"id": 4,"first":"George","last":"Lukas"},{"id": 6,"first":"Highlighted","last":"Row","__styles__":"background-color: #E6E6E6"},{"id": 5,"first":"Lucy","last":"Wilson"},{"id": 7,"first":"Pat","last":"Greogry"}],"legend":[{"field":"last","label":"Last Name"},{"field":"first","label":"First Name"}],"orderBy":"id","reportTitle":"People"}'></data-table>
+	<div class="jumbotron">
+		<h1>Vue.js FileMaker WebViewer Components</h1>
+	</div>
+
+	<div class="list-group">
+		<a href="data-table.html" class="list-group-item">Data Table</a>
+	</div>
 
 </div>
 
 </body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.10/vue.min.js"></script>
-<script src="build/main.js"></script>
+<script src="build/DataTable.js"></script>
 </html>

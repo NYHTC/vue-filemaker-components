@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+</head>
+<body>
+
+
+<div class="container">
+
+	<data-table :rows='[{"__action__":"","first":"Bob","id":1,"last":"Smith"},{"first":"Fred","id":3,"last":"Johnson"},{"first":"Sue","id":2,"last":"Doe"},{"first":"George","id":4,"last":"Lukas"},{"__styles__":"background-color: #E6E6E6","first":"Highlighted","id":6,"last":"Row"},{"first":"Lucy","id":5,"last":"Wilson"},{"first":"Pat","id":7,"last":"Greogry"}]' title="some report" :legend='[{"field":"last","label":"Last Name"},{"field":"first","label":"First Name"}]'></data-table>
+
+</div>
+
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.10/vue.min.js"></script>
+<script src="build/DataTable.js"></script>
+</html>

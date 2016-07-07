@@ -69,12 +69,6 @@
 </script>
 
 <style>
-	body {
-		font-size: 12px;
-	}
-	.table>tbody>tr>td, .table>thead>tr>th {
-		padding: 5px;
-	}
 	td.action {
 		cursor: pointer;
 	}

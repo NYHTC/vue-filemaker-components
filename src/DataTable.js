@@ -1,7 +1,7 @@
 var DataTable = require('./components/DataTable.vue');
 
 new Vue({
-	el: '.container',
+	el: 'body',
 
 	components: { DataTable }
 });
